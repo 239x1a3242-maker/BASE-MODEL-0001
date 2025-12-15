@@ -32,38 +32,10 @@ Upload multiple files at once:
 - Audio: Speech‑to‑text via Whisper  
 - Video: Audio extraction via ffmpeg → Whisper
 
-### 💾 Persistent Uploads
-- Files saved under `dataupload/` by type  
-- Timestamped, safe filenames  
-- Automatic directory creation
-
 ### 🔐 Simple Login Reminder UX
 - After **5 guest messages**, a popup encourages login  
 - Logged‑in users are not interrupted  
 - Login state stored in `localStorage`
-
----
-
-## 🗂 Project Structure
-
-```
-project_root/
-├── run.py                # FastAPI backend + template serving
-├── load_model.py         # Loads the language model once
-├── generate.py           # generate_response() wrapper
-├── file_pipeline.py      # File detection, storage, and summarization
-├── templates/
-│   ├── chat.html         # Main chat interface
-│   └── auth.html         # Login / signup UI
-├── dataupload/           # Created at runtime for uploads
-│   ├── images/
-│   ├── videos/
-│   ├── audio/
-│   ├── documents/
-│   ├── tabular/
-│   └── other/
-└── requirements.txt
-```
 
 ---
 
